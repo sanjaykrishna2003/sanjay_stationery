@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjay Stationery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Sanjay Stationery</h1>
+      <p class="tagline">Everyday stationery</p>
+    </div>
+  </header>
+
+  <main id="main-layout" class="container layout">
+    <section class="panel" aria-labelledby="products-heading">
+      <h2 id="products-heading">Products</h2>
+      <ul class="product-list">
+        <li class="product-card" data-testid="product-pen">
+          <div class="product-info">
+            <h3>Pen</h3>
+            <p class="product-desc">A smooth-writing blue ink ballpoint pen for everyday use.</p>
+            <p class="product-price" data-testid="price-pen">&#8377;20.00</p>
+          </div>
+          <button type="button" class="btn-secondary" data-add-id="pen" data-testid="add-pen">
+            Add to cart <span class="visually-hidden">Pen</span>
+          </button>
+        </li>
+
+        <li class="product-card" data-testid="product-notebook">
+          <div class="product-info">
+            <h3>Notebook</h3>
+            <p class="product-desc">A 120-page ruled notebook for school, college or office.</p>
+            <p class="product-price" data-testid="price-notebook">&#8377;60.00</p>
+          </div>
+          <button type="button" class="btn-secondary" data-add-id="notebook" data-testid="add-notebook">
+            Add to cart <span class="visually-hidden">Notebook</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="cart-heading">
+      <h2 id="cart-heading">Your Cart &amp; Checkout</h2>
+
+      <p id="cart-message" class="status-message" role="status" aria-live="polite" data-testid="cart-message" hidden></p>
+
+      <p id="empty-cart" class="empty-cart" data-testid="empty-cart">Your cart is empty.</p>
+
+      <ul id="cart-items" class="cart-list" data-testid="cart-items"></ul>
+
+      <div class="order-total-row">
+        <span>Order Total</span>
+        <strong id="order-total" aria-live="polite" data-testid="order-total">&#8377;0.00</strong>
+      </div>
+
+      <form id="checkout-form" class="checkout-form" novalidate>
+        <div class="field">
+          <label for="customer-name">Customer Name <span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="customer-name"
+            name="customerName"
+            autocomplete="name"
+            required
+            aria-describedby="name-error"
+            data-testid="customer-name"
+          >
+          <p id="name-error" class="field-error" aria-live="polite" data-testid="name-error" hidden></p>
+        </div>
+
+        <button type="submit" id="place-order-btn" class="btn-primary" data-testid="place-order">
+          Place Order
+        </button>
+      </form>
+    </section>
+
+    <div id="confirmation-container" class="confirmation-slot" aria-live="polite"></div>
+  </main>
+</body>
+</html>
