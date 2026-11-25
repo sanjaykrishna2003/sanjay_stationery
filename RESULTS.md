@@ -16,7 +16,7 @@
 | TC-03 | Quantity change updates the exact total | PASS | The quantity was changed and the line total and order total were verified against the expected values. The checkout test completed successfully. |
 
 - **HTML report checked:** Yes
-- **Screenshots folder (`test-results/`) checked:** [Yes / No]
+- **Screenshots folder (`test-results/`) checked:** Yes 
 
 ## Manual Tests
 
